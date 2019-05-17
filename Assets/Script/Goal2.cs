@@ -8,6 +8,7 @@ public class Goal2 : MonoBehaviour
     public GameObject Rook;
     public ChessTest ChessScript;
     public Timer timer;
+    public AudioClip correct;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +48,7 @@ public class Goal2 : MonoBehaviour
         }
         ChessScript.deactivateThis();
         GameObject.Find("Key").SetActive(true);
+        AudioSource.PlayClipAtPoint(correct, transform.position);
         timer.AddTime(60f);
         //Open the door here;
     }
