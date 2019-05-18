@@ -6911,7 +6911,7 @@ PrefabInstance:
     - target: {fileID: 4810151290711497180, guid: d9da0c947941e6b4a89d4ea5bcaa914c,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 12.33934
+      value: 9.869497
       objectReference: {fileID: 0}
     - target: {fileID: 4810151290711497180, guid: d9da0c947941e6b4a89d4ea5bcaa914c,
         type: 3}
@@ -6921,7 +6921,7 @@ PrefabInstance:
     - target: {fileID: 4810151290711497180, guid: d9da0c947941e6b4a89d4ea5bcaa914c,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 3.595184
+      value: 3.0022304
       objectReference: {fileID: 0}
     - target: {fileID: 4810151290711497183, guid: d9da0c947941e6b4a89d4ea5bcaa914c,
         type: 3}
@@ -9196,7 +9196,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 870642508}
   m_LocalRotation: {x: -0, y: -0.70777714, z: -0, w: 0.7064358}
-  m_LocalPosition: {x: 8.77, y: 2.38, z: 11.6}
+  m_LocalPosition: {x: 13.57, y: 2.38, z: -13.67}
   m_LocalScale: {x: 1.0446256, y: 1.5803, z: 0.9953677}
   m_Children:
   - {fileID: 1851853854}
@@ -11901,7 +11901,7 @@ MonoBehaviour:
   Rook: {fileID: 306649439}
   ChessScript: {fileID: 145700847}
   timer: {fileID: 1669442102}
-  correct: {fileID: 0}
+  correct: {fileID: 8300000, guid: 8b355b927540c0f40ad95dfae0edba69, type: 3}
 --- !u!65 &1120646497
 BoxCollider:
   m_ObjectHideFlags: 0
