@@ -18,7 +18,7 @@ public class KeyPickup : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter()
+    private void OnTriggerEnter()
     {
         Door.Open();
         Destroy(this.gameObject);
