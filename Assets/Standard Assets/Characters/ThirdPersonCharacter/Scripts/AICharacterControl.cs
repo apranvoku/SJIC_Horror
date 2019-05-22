@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
@@ -38,6 +39,15 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         public void SetTarget(Transform target)
         {
             this.target = target;
+        }
+
+        void OnCollisionEnter(Collision col)
+        {
+            if (col.gameObject.tag == "Player")
+            {
+                SceneManager.LoadScene("GameOver");
+                //Do something;
+            }
         }
     }
 }

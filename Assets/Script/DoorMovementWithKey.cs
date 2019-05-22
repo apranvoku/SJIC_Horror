@@ -24,10 +24,8 @@ public class DoorMovementWithKey : MonoBehaviour
     {
         if (!opened)
         {
-            this.GetComponent<Rigidbody>().isKinematic = false;
             StartCoroutine("openDoor");
             opened = true;
-            this.GetComponent<Rigidbody>().isKinematic = true;
         }
     }
 
