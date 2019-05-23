@@ -5,11 +5,13 @@ using UnityEngine;
 public class Fall : MonoBehaviour
 {
     public GameObject floor;
+    public Timer timer;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
+            timer.AddTime(99999f);
             floor.SetActive(false);
         }
     }
