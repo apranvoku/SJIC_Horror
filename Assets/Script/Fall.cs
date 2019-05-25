@@ -6,6 +6,7 @@ public class Fall : MonoBehaviour
 {
     public GameObject floor;
     public Timer timer;
+    public GameObject BigJiggly;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,6 +14,7 @@ public class Fall : MonoBehaviour
         {
             timer.AddTime(99999f);
             floor.SetActive(false);
+            BigJiggly.SetActive(true);
         }
     }
 

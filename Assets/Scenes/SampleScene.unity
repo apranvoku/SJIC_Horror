@@ -1018,6 +1018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floor: {fileID: 1299773134}
   timer: {fileID: 1669442102}
+  BigJiggly: {fileID: 317797755}
 --- !u!65 &78804821
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1794,12 +1795,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159415113}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c5335f0882fe4d478883cc8c58ce906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 870642512}
+  audio: {fileID: 0}
 --- !u!1 &159415115
 GameObject:
   m_ObjectHideFlags: 0
@@ -4057,15 +4059,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 275936592}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 13}
-  m_LocalScale: {x: 2.257459, y: 0.54528, z: 0.54528}
+  m_LocalPosition: {x: 0, y: 0, z: 10.1}
+  m_LocalScale: {x: 2.257459, y: 0.43682382, z: 0.54528}
   m_Children: []
   m_Father: {fileID: 2078265716}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 218, y: 8}
+  m_AnchoredPosition: {x: 218, y: 56.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &275936594
@@ -4101,7 +4103,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: You Win!
+  m_Text: "You Win!\nPress R \nto restart\n"
 --- !u!222 &275936595
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4387,6 +4389,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1140039815}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &317797756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317797755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47b4306a4425cd044a198a9176e00613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &317797758
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9000,7 +9014,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 870642508}
   m_LocalRotation: {x: -0, y: -0.70777714, z: -0, w: 0.7064358}
-  m_LocalPosition: {x: -17.55, y: 2.38, z: -43.36}
+  m_LocalPosition: {x: 13.6, y: 2.128, z: -12.86}
   m_LocalScale: {x: 1.0446256, y: 1.5803, z: 0.9953677}
   m_Children:
   - {fileID: 1851853854}
@@ -12156,6 +12170,10 @@ PrefabInstance:
     - target: {fileID: 100020, guid: 627d2fbaf5fee4832819c2446e8d218f, type: 3}
       propertyPath: m_Name
       value: BigJiggly
+      objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: 627d2fbaf5fee4832819c2446e8d218f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: 627d2fbaf5fee4832819c2446e8d218f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16232,6 +16250,7 @@ GameObject:
   - component: {fileID: 1594686731}
   - component: {fileID: 1594686730}
   - component: {fileID: 1594686729}
+  - component: {fileID: 1594686734}
   m_Layer: 0
   m_Name: Knuckles
   m_TagString: Untagged
@@ -16252,6 +16271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 159901545}
+  audio: {fileID: 1594686734}
 --- !u!114 &1594686730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16327,6 +16347,102 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 1
+--- !u!82 &1594686734
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594686728}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 989fc7fbb58e8604695fcfecea0163be, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!54 &1594686735
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16351,7 +16467,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594686728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.09, y: 0.78, z: -13.65}
+  m_LocalPosition: {x: 4.63, y: 0.78, z: -13.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6789137715607230916}
@@ -18402,13 +18518,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec08e287d220b43daaecbb8a9e8e29a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainCharacter: {fileID: 0}
 --- !u!136 &1807746005
 CapsuleCollider:
   m_ObjectHideFlags: 0
