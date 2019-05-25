@@ -17,10 +17,10 @@ public class DoorMovement : MonoBehaviour
     {
         if (!opened)
         {
-            AddTime();
-            opened = true;
-            StartCoroutine("openDoor");
-            this.GetComponent<Rigidbody>().isKinematic = true;
+                AddTime();
+                opened = true;
+                StartCoroutine("openDoor");
+                this.GetComponent<Rigidbody>().isKinematic = true;
         }
     }
 
