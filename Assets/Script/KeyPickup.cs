@@ -7,6 +7,7 @@ public class KeyPickup : MonoBehaviour
 {
     public DoorMovementWithKey Door;
     public GameObject Jiggly;
+    public GameObject Squidward;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class KeyPickup : MonoBehaviour
     {
         Door.Open();
         Jiggly.SetActive(true);
+        Squidward.SetActive(true);
         Destroy(this.gameObject);
     }
 }

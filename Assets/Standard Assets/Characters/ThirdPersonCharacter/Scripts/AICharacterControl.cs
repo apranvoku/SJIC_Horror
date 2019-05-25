@@ -43,10 +43,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         void OnCollisionEnter(Collision col)
         {
-            if (col.gameObject.tag == "Player")
+            if (col.gameObject.tag == "Player" && this.gameObject.name == "Jiggly")
             {
                 SceneManager.LoadScene("GameOver");
                 //Do something;
+            }
+            else if(col.gameObject.tag == "Jiggly")
+            {
+                col.gameObject.SetActive(false);
             }
         }
     }
