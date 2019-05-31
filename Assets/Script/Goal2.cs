@@ -39,12 +39,12 @@ public class Goal2 : MonoBehaviour
         differenceVector.y = 0;
         while ((PawnFlatPosition - GoalFlatPosition).sqrMagnitude > 0.0005f)
         {
-            Pawn.transform.position += differenceVector / 100;
-            PawnFlatPosition = Pawn.transform.position;
-            GoalFlatPosition = this.transform.position;
-            PawnFlatPosition.y = 0;
-            GoalFlatPosition.y = 0;
-            yield return null;
+            Pawn.transform.position += differenceVector / 100;  
+            PawnFlatPosition = Pawn.transform.position;   
+            GoalFlatPosition = this.transform.position; 
+            PawnFlatPosition.y = 0;  
+            GoalFlatPosition.y = 0;  
+            yield return null;  
         }
         ChessScript.deactivateThis();
         GameObject.Find("Key").SetActive(true);
