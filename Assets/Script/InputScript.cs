@@ -10,6 +10,7 @@ public class InputScript : MonoBehaviour
     public DoorWithCodeLock InputLockDoor;
     private InputField inputField;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +24,9 @@ public class InputScript : MonoBehaviour
 
     }
 
-    private void OnMouseDown()
+    void OnMouseDown()
     {
+
         switch (myChildID)
         {
             case 1:
@@ -56,7 +58,7 @@ public class InputScript : MonoBehaviour
                 break;
             case 10:
                 inputField.text += "0";
-                break;  
+                break;
             case 11:
                 inputField.text = "";
                 break;
@@ -64,12 +66,12 @@ public class InputScript : MonoBehaviour
                 if (inputField.text.Equals("546"))
                 {
                     InputLockDoor.Open();
-    
                 }
                 break;
             default:
                 print("Incorrect intelligence level.");
                 break;
         }
+
     }
 }
